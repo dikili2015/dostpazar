@@ -20,8 +20,6 @@ nav a {color:white; margin:0 12px; text-decoration:none; font-weight:bold;}
 .price {font-size:18px; color:#444; min-height:25px; margin-bottom:10px;}
 .whatsapp-btn, .detay-btn {background:#25D366; color:white; padding:10px 14px; font-size:16px; text-decoration:none; border-radius:10px; font-weight:bold; display:inline-block; transition:0.2s; margin-top:5px;}
 .whatsapp-btn:hover, .detay-btn:hover {background:#1ebe5d;}
-
-/* Modal stil */
 .modal {display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.7);}
 .modal-content {background:white; margin:50px auto; padding:20px; border-radius:12px; max-width:700px; position:relative;}
 .close {position:absolute; top:10px; right:20px; font-size:28px; font-weight:bold; cursor:pointer;}
@@ -43,46 +41,39 @@ nav a {color:white; margin:0 12px; text-decoration:none; font-weight:bold;}
 <div class="container">
   <div class="product-list">
 
-    <!-- ÜRÜN 1 -->
+    <!-- 4 Bölmeli Saklama Kabı -->
     <div class="product-card">
       <img src="images/ev_gerecleri/saklama_kabi/eg_sk_a.png" alt="4 Bölmeli Saklama Kabı" onclick="openModal('modal1')">
       <h3>4 Bölmeli Saklama Kabı</h3>
       <p class="price"><strong>50 TL</strong></p>
       <p>Çok Amaçlı Saklama Kutusu</p>
       <a class="detay-btn" onclick="openModal('modal1')">Detaylı Bilgi</a>
-      <a class="whatsapp-btn" href="https://wa.me/905510471653?text=4%20B%C3%B6lmeli%20Saklama%20Kab%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank">WhatsApp Sipariş</a>
+      <a class="whatsapp-btn" href="https://wa.me/905510471653?text=4%20B%C3%B6lmeli%20Saklama%20Kab%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank">WhatsApp Satıcıya Sor</a>
     </div>
-
-    <!-- Diğer ürünler buraya aynı formatta eklenebilir -->
 
   </div>
 </div>
 
-<!-- MODAL -->
+<!-- Modal -->
 <div id="modal1" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('modal1')">&times;</span>
     <h3>4 Bölmeli Saklama Kabı</h3>
     <p class="price"><strong>50 TL</strong></p>
-    <p>Çok amaçlı mini saklama kutusu. Her bölme 250 ml kapasite, toplam 1000 ml. Sızdırmaz kapak, BPA içermez, PP 5. Boyut: 20x15x6,5 cm.</p>
+    <p>Çok amaçlı mini saklama kutusu. Her bölme 250 ml kapasite, toplam 1000 ml. Sızdırmaz kapak, BPA içermez, PP 5. Boyut: 20x15x6,5 cm. Ürün sıfırdır, stok için bilgi isteyiniz.</p>
     <img src="images/ev_gerecleri/saklama_kabi/eg_sk_1.png" alt="">
     <img src="images/ev_gerecleri/saklama_kabi/eg_sk_2.png" alt="">
     <img src="images/ev_gerecleri/saklama_kabi/eg_sk_3.png" alt="">
     <img src="images/ev_gerecleri/saklama_kabi/eg_sk_4.png" alt="">
     <img src="images/ev_gerecleri/saklama_kabi/eg_sk_5.png" alt="">
     <img src="images/ev_gerecleri/saklama_kabi/eg_sk_6.png" alt="">
-    <a class="whatsapp-btn" href="https://wa.me/905510471653?text=4%20B%C3%B6lmeli%20Saklama%20Kab%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank">WhatsApp ile Sipariş</a>
+    <a class="whatsapp-btn" href="https://wa.me/905510471653?text=4%20B%C3%B6lmeli%20Saklama%20Kab%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank">WhatsApp Satıcıya Sor</a>
   </div>
 </div>
 
 <script>
-function openModal(id) {
-  document.getElementById(id).style.display = "block";
-}
-function closeModal(id) {
-  document.getElementById(id).style.display = "none";
-}
-// Modal dışına tıklandığında kapatma
+function openModal(id) { document.getElementById(id).style.display = "block"; }
+function closeModal(id) { document.getElementById(id).style.display = "none"; }
 window.onclick = function(event) {
   var modal = document.getElementById('modal1');
   if (event.target == modal) { modal.style.display = "none"; }
