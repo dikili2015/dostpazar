@@ -19,6 +19,9 @@ header{
   padding:25px 15px;
 }
 
+header h1{margin:0;font-size:34px;}
+header p{margin:5px 0;}
+
 nav{
   background:#1b5e20;
   padding:10px;
@@ -44,6 +47,7 @@ nav a{
   justify-content:center;
 }
 
+/* ÜRÜN KARTI */
 .product{
   background:#fff;
   width:260px;
@@ -90,14 +94,19 @@ nav a{
   font-weight:bold;
 }
 
-/* Detay Alanı */
+/* DETAY ALANI */
 .detay{
+  display:none;
   background:#fff;
   margin:40px auto;
   padding:20px;
   border-radius:14px;
   box-shadow:0 6px 14px rgba(0,0,0,0.15);
-  max-width:800px;
+  max-width:900px;
+}
+
+.detay:target{
+  display:block;
 }
 
 .detay img{
@@ -128,8 +137,8 @@ nav a{
 <div class="products">
 
 <!-- =====================================================
-     🔴🔴🔴 YENİ ÜRÜN EKLEME ALANI (ÜRÜN LİSTESİ) 🔴🔴🔴
-     Yeni ürün kartlarını BU BLOĞUN ALTINA ekle
+     🔴🔴🔴 YENİ ÜRÜN EKLEME ALANI (ÜRÜN KARTLARI) 🔴🔴🔴
+     Yeni ürünün ÖZET kartını buraya ekle
 ===================================================== -->
 
 <!-- ÜRÜN 1 -->
@@ -139,32 +148,37 @@ nav a{
   <p class="price">50 TL</p>
   <p>Çok Amaçlı Saklama Kutusu</p>
   <a class="btn" href="#urun-saklama">Detaylı Bilgi</a><br>
-  <a class="whatsapp" href="https://wa.me/905510471653">WhatsApp Satıcıya Sor</a>
+  <a class="whatsapp" href="https://wa.me/905510471653" target="_blank">
+    WhatsApp Satıcıya Sor
+  </a>
 </div>
 
 <!-- ÜRÜN 2 -->
 <div class="product">
   <img src="images/ev_gerecleri/led_lam/eg_led_a.png">
-  <h3>3 Kollu Pervane Led Ampul</h3>
+  <h3>Katlanabilir 3 Kollu Pervane Led Ampul</h3>
   <p class="price">130 TL</p>
-  <p>Katlanabilir 45W Led Ampul</p>
+  <p>Pervane Led Ampul 3 Kollu 45W</p>
   <a class="btn" href="#urun-led">Detaylı Bilgi</a><br>
-  <a class="whatsapp" href="https://wa.me/905510471653">WhatsApp Satıcıya Sor</a>
+  <a class="whatsapp" href="https://wa.me/905510471653" target="_blank">
+    WhatsApp Satıcıya Sor
+  </a>
 </div>
 
-<!-- 🔴 YENİ ÜRÜN BURAYA EKLENECEK 🔴 -->
+<!-- 🔴 YENİ ÜRÜN KARTI BURAYA EKLENECEK 🔴 -->
 
 </div>
 </div>
 
 <!-- =====================================================
-     🔴🔴🔴 YENİ ÜRÜN EKLEME ALANI (DETAY SAYFASI) 🔴🔴🔴
-     Liste kısmındaki href ID ile AYNI olmalı
+     🔴🔴🔴 YENİ ÜRÜN EKLEME ALANI (DETAYLAR) 🔴🔴🔴
+     Yukarıdaki href ile id AYNI olmalı
 ===================================================== -->
 
 <!-- DETAY 1 -->
 <div id="urun-saklama" class="detay">
   <a class="btn" href="#liste">← Ev Gereçleri</a>
+
   <h2>4 Bölmeli Saklama Kabı</h2>
   <p class="price">50 TL</p>
 
@@ -172,12 +186,19 @@ nav a{
   <img src="images/ev_gerecleri/saklama_kabi/eg_sk_2.png">
   <img src="images/ev_gerecleri/saklama_kabi/eg_sk_3.png">
   <img src="images/ev_gerecleri/saklama_kabi/eg_sk_4.png">
+  <img src="images/ev_gerecleri/saklama_kabi/eg_sk_5.png">
+  <img src="images/ev_gerecleri/saklama_kabi/eg_sk_6.png">
 
   <p>
-    1000 ml kapasiteli, BPA içermeyen, sızdırmaz çok amaçlı saklama kabı.
+    Çok amaçlı mini saklama kutusu.<br><br>
+    Her bölme 250 ml kapasiteye sahiptir.<br>
+    Toplam 1000 ml saklama alanı sağlar.<br>
+    Sızdırmaz kapak yapısına sahiptir.<br>
+    BPA içermez, PP5 kaliteli plastikten üretilmiştir.<br><br>
+    Ürün sıfırdır, stok için bilgi isteyiniz.
   </p>
 
-  <a class="whatsapp" href="https://wa.me/905510471653">
+  <a class="whatsapp" href="https://wa.me/905510471653" target="_blank">
     WhatsApp Satıcıya Sor
   </a>
 </div>
@@ -185,6 +206,7 @@ nav a{
 <!-- DETAY 2 -->
 <div id="urun-led" class="detay">
   <a class="btn" href="#liste">← Ev Gereçleri</a>
+
   <h2>Katlanabilir 3 Kollu Pervane Led Ampul</h2>
   <p class="price">130 TL</p>
 
@@ -193,10 +215,15 @@ nav a{
   <img src="images/ev_gerecleri/led_lam/eg_led_3.png">
 
   <p>
-    45W güçlü aydınlatma, E27 uyumlu, %80 enerji tasarrufu sağlar.
+    45W güçlü aydınlatma sağlar.<br>
+    Katlanabilir ve yönlendirilebilir kanatlar.<br>
+    Standart E27 duy uyumludur.<br>
+    %80’e varan enerji tasarrufu sağlar.<br><br>
+    Ev, dükkan, atölye ve ticari alanlar için uygundur.<br><br>
+    Ürün sıfırdır, stok için bilgi isteyiniz.
   </p>
 
-  <a class="whatsapp" href="https://wa.me/905510471653">
+  <a class="whatsapp" href="https://wa.me/905510471653" target="_blank">
     WhatsApp Satıcıya Sor
   </a>
 </div>
