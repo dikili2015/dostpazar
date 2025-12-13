@@ -2,13 +2,225 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>DostPazar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DostPazar | Dosta gider gibi alışveriş</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #2f855a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    header h2 {
+      margin: 10px 0 5px;
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    /* MENU */
+    nav {
+      background-color: #22543d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 12px;
+    }
+
+    nav a {
+      color: #fff;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background-color: #1a3f2e;
+    }
+
+    /* ANA ALAN */
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 15px;
+    }
+
+    /* KATEGORİLER */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-bottom: 50px;
+    }
+
+    .category {
+      background: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 14px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+      transition: 0.3s;
+    }
+
+    .category:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+    }
+
+    .category h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .category p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* KONUM */
+    .location {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+      margin-bottom: 40px;
+    }
+
+    .location h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .location p {
+      margin: 6px 0;
+      font-size: 15px;
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .whatsapp a {
+      background-color: #25D366;
+      color: #fff;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .whatsapp a:hover {
+      background-color: #1ebe5d;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #22543d;
+      color: #fff;
+      text-align: center;
+      padding: 18px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
-  <h1>DostPazar</h1>
-  <h2>Dosta gider gibi alışveriş.</h2>
-  <p>Gördüğün neyse o.</p>
+  <!-- HEADER -->
+  <header>
+    <h1>DostPazar</h1>
+    <h2>Dosta gider gibi alışveriş.</h2>
+    <p>Gördüğün neyse o.</p>
+  </header>
+
+  <!-- MENU -->
+  <nav>
+    <a href="#">Ana Sayfa</a>
+    <a href="#">Kiyafet</a>
+    <a href="#">Ayakkabi</a>
+    <a href="#">Akilli Saat</a>
+    <a href="#">Hirdavat</a>
+    <a href="#">Iletisim</a>
+  </nav>
+
+  <!-- İÇERİK -->
+  <div class="container">
+
+    <!-- KATEGORİLER -->
+    <div class="categories">
+      <div class="category">
+        <h3>Kiyafet</h3>
+        <p>Temiz, kullanilir ikinci el kiyafetler</p>
+      </div>
+
+      <div class="category">
+        <h3>Ayakkabi</h3>
+        <p>Saglam, uygun fiyatli ayakkabilar</p>
+      </div>
+
+      <div class="category">
+        <h3>Akilli Saat</h3>
+        <p>Calisir durumda, sorunsuz urunler</p>
+      </div>
+
+      <div class="category">
+        <h3>Hirdavat</h3>
+        <p>Vida, musluk, el aletleri</p>
+      </div>
+    </div>
+
+    <!-- KONUM -->
+    <div class="location">
+      <h3>📍 Konum</h3>
+      <p><strong>Pazar Yeri:</strong> Egekent Pazar Yeri</p>
+      <p><strong>Adres:</strong> Egekent, 8845. Sk. No:7, 35610 Aosb / Çiğli / İzmir</p>
+      <p><strong>Telefon / WhatsApp:</strong> 0 551 047 16 53</p>
+    </div>
+
+    <!-- WHATSAPP -->
+    <div class="whatsapp">
+      <a href="https://wa.me/905510471653" target="_blank">
+        WhatsApp ile İletişime Geç
+      </a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 DostPazar • İkinci el alisveris
+  </footer>
 
 </body>
 </html>
