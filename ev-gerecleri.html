@@ -7,17 +7,39 @@
 
 <style>
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
+  font-family: Arial, sans-serif;
   background: #f4f6f7;
+  color: #333;
 }
 
 header {
   background: #2e7d32;
   color: white;
-  padding: 20px;
   text-align: center;
-  font-size: 28px;
+  padding: 25px 15px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+nav {
+  background: #1b5e20;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
   font-weight: bold;
 }
 
@@ -27,147 +49,96 @@ header {
   padding: 15px;
 }
 
-.product-card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-  padding: 20px;
-}
-
-.product-main {
+.product-list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
-.product-main img {
-  width: 320px;
+.product-card {
+  width: 260px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* tüm resimler kartta düzgün görünür */
   border-radius: 10px;
-  cursor: pointer;
+  margin-bottom: 10px;
 }
 
-.product-info {
-  flex: 1;
-}
-
-.product-info h2 {
-  margin-top: 0;
-  font-size: 26px;
+.product-card h3 {
+  font-size: 20px;
+  min-height: 50px; /* farklı başlık uzunlukları hizalı olsun */
 }
 
 .price {
-  font-size: 22px;
-  font-weight: bold;
-  margin: 10px 0;
+  font-size: 18px;
+  color: #444;
+  min-height: 25px; /* fiyatlar hizalı olsun */
+  margin-bottom: 10px;
 }
 
-.whatsapp {
-  display: inline-block;
-  margin-top: 10px;
-  background: #25d366;
+.whatsapp-btn {
+  background: #25D366;
   color: white;
-  padding: 12px 18px;
-  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 16px;
   text-decoration: none;
+  border-radius: 10px;
   font-weight: bold;
-}
-
-.details-btn {
   display: inline-block;
-  margin-top: 10px;
-  margin-left: 10px;
-  background: #333;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 8px;
-  cursor: pointer;
+  transition: 0.2s;
 }
 
-.details {
-  display: none;
-  margin-top: 25px;
+.whatsapp-btn:hover {
+  background: #1ebe5d;
 }
 
-.details img {
-  width: 150px;
-  margin: 5px;
-  border-radius: 8px;
-}
-
-.details ul {
-  margin-top: 15px;
-  padding-left: 20px;
-}
 </style>
 </head>
 
 <body>
 
-<header>Ev Gereçleri</header>
+<header>
+  <h1>Ev Gereçleri</h1>
+  <p>Ev için pratik ve kullanışlı ürünler</p>
+</header>
+
+<nav>
+  <a href="index.html">← Ana Sayfaya Dön</a>
+</nav>
 
 <div class="container">
 
-<div class="product-card">
+  <div class="product-list">
 
-  <div class="product-main">
-    <img src="images/ev_gerecleri/saklama_kabi/eg_sk_a.png" onclick="toggleDetails()">
-
-    <div class="product-info">
-      <h2>4 Bölmeli Saklama Kabı</h2>
-      <div class="price">50 TL</div>
+    <!-- ÜRÜN: 4 Bölmeli Saklama Kabı -->
+    <div class="product-card">
+      <img src="images/ev_gerecleri/saklama_kabi/eg_sk_a.png" alt="4 Bölmeli Saklama Kabı">
+      <h3>4 Bölmeli Saklama Kabı</h3>
+      <p class="price"><strong>50 TL</strong></p>
       <p>Çok Amaçlı Saklama Kutusu</p>
-
-      <a class="whatsapp"
-         href="https://wa.me/905510471653?text=4%20Bölmeli%20Saklama%20Kabı%20hakkında%20bilgi%20almak%20istiyorum."
-         target="_blank">
-         WhatsApp
-      </a>
-
-      <span class="details-btn" onclick="toggleDetails()">Detaylı Bilgi</span>
+      <a class="whatsapp-btn" 
+         href="https://wa.me/905510471653?text=4%20B%C3%B6lmeli%20Saklama%20Kab%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+         target="_blank">WhatsApp Sipariş</a>
     </div>
-  </div>
-
-  <div class="details" id="details">
-    <h3>Ürün Detayları</h3>
-
-    <div>
-      <img src="images/ev_gerecleri/saklama_kabi/eg_sk_1.png">
-      <img src="images/ev_gerecleri/saklama_kabi/eg_sk_2.png">
-      <img src="images/ev_gerecleri/saklama_kabi/eg_sk_3.png">
-      <img src="images/ev_gerecleri/saklama_kabi/eg_sk_4.png">
-      <img src="images/ev_gerecleri/saklama_kabi/eg_sk_5.png">
-      <img src="images/ev_gerecleri/saklama_kabi/eg_sk_6.png">
-    </div>
-
-    <ul>
-      <li>Her bölme 250 ml kapasitelidir (Toplam 1000 ml)</li>
-      <li>Çok amaçlı mini saklama kutusu</li>
-      <li>Sıkı kapak yapısı ile sızdırma yapmaz</li>
-      <li>Kaliteli plastik malzeme</li>
-      <li>BPA içermez (PP 5)</li>
-      <li>Ürün ölçüleri: 20 × 15 × 6,5 cm</li>
-      <li>Ürün sıfırdır, hiç kullanılmamıştır</li>
-      <li>Stok için bilgi isteyiniz</li>
-    </ul>
-
-    <a class="whatsapp"
-       href="https://wa.me/905510471653?text=4%20Bölmeli%20Saklama%20Kabı%20detaylı%20bilgi%20almak%20istiyorum."
-       target="_blank">
-       WhatsApp ile İletişim
-    </a>
 
   </div>
 
 </div>
-
-</div>
-
-<script>
-function toggleDetails() {
-  const d = document.getElementById("details");
-  d.style.display = d.style.display === "block" ? "none" : "block";
-}
-</script>
 
 </body>
 </html>
