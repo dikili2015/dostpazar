@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ev Gereçleri | Dost Pazar</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f7;
+}
+
+header {
+  background: #2e7d32;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 15px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  padding: 20px;
+}
+
+.product-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-main img {
+  width: 320px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h2 {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.whatsapp {
+  display: inline-block;
+  margin-top: 10px;
+  background: #25d366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.details-btn {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+  background: #333;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.details {
+  display: none;
+  margin-top: 25px;
+}
+
+.details img {
+  width: 150px;
+  margin: 5px;
+  border-radius: 8px;
+}
+
+.details ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>Ev Gereçleri</header>
+
+<div class="container">
+
+<div class="product-card">
+
+  <div class="product-main">
+    <img src="images/ev_gerecleri/saklama_kabi/eg_sk_a.png" onclick="toggleDetails()">
+
+    <div class="product-info">
+      <h2>4 Bölmeli Saklama Kabı</h2>
+      <div class="price">50 TL</div>
+      <p>Çok Amaçlı Saklama Kutusu</p>
+
+      <a class="whatsapp"
+         href="https://wa.me/905510471653?text=4%20Bölmeli%20Saklama%20Kabı%20hakkında%20bilgi%20almak%20istiyorum."
+         target="_blank">
+         WhatsApp
+      </a>
+
+      <span class="details-btn" onclick="toggleDetails()">Detaylı Bilgi</span>
+    </div>
+  </div>
+
+  <div class="details" id="details">
+    <h3>Ürün Detayları</h3>
+
+    <div>
+      <img src="images/ev_gerecleri/saklama_kabi/eg_sk_1.png">
+      <img src="images/ev_gerecleri/saklama_kabi/eg_sk_2.png">
+      <img src="images/ev_gerecleri/saklama_kabi/eg_sk_3.png">
+      <img src="images/ev_gerecleri/saklama_kabi/eg_sk_4.png">
+      <img src="images/ev_gerecleri/saklama_kabi/eg_sk_5.png">
+      <img src="images/ev_gerecleri/saklama_kabi/eg_sk_6.png">
+    </div>
+
+    <ul>
+      <li>Her bölme 250 ml kapasitelidir (Toplam 1000 ml)</li>
+      <li>Çok amaçlı mini saklama kutusu</li>
+      <li>Sıkı kapak yapısı ile sızdırma yapmaz</li>
+      <li>Kaliteli plastik malzeme</li>
+      <li>BPA içermez (PP 5)</li>
+      <li>Ürün ölçüleri: 20 × 15 × 6,5 cm</li>
+      <li>Ürün sıfırdır, hiç kullanılmamıştır</li>
+      <li>Stok için bilgi isteyiniz</li>
+    </ul>
+
+    <a class="whatsapp"
+       href="https://wa.me/905510471653?text=4%20Bölmeli%20Saklama%20Kabı%20detaylı%20bilgi%20almak%20istiyorum."
+       target="_blank">
+       WhatsApp ile İletişim
+    </a>
+
+  </div>
+
+</div>
+
+</div>
+
+<script>
+function toggleDetails() {
+  const d = document.getElementById("details");
+  d.style.display = d.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
