@@ -3,80 +3,222 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ev Gereçleri | Dost Pazar</title>
+<title>Dost Pazar | Ev Gereçleri</title>
+
 <style>
-body {margin:0; font-family:Arial,sans-serif; background:#f4f6f7; color:#333;}
-header {background:#2e7d32; color:white; text-align:center; padding:25px 15px;}
-header h1 {margin:0; font-size:32px;}
-header p {margin:5px 0; font-size:16px;}
-nav {background:#1b5e20; padding:10px; text-align:center;}
-nav a {color:white; margin:0 12px; text-decoration:none; font-weight:bold;}
-.container {max-width:1100px; margin:30px auto; padding:15px;}
-.product-list {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
-.product-card {width:260px; background:white; padding:15px; border-radius:12px; box-shadow:0 6px 14px rgba(0,0,0,0.12); text-align:center; transition:0.3s;}
-.product-card:hover {transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.18);}
-.product-card img {width:100%; height:200px; object-fit:cover; border-radius:10px; margin-bottom:10px;}
-.product-card h3 {font-size:20px; min-height:50px;}
-.price {font-size:18px; color:#444; min-height:25px; margin-bottom:10px;}
-.whatsapp-btn, .detay-btn {background:#25D366; color:white; padding:10px 14px; font-size:16px; text-decoration:none; border-radius:10px; font-weight:bold; display:inline-block; transition:0.2s; margin-top:5px;}
-.whatsapp-btn:hover, .detay-btn:hover {background:#1ebe5d;}
-.modal {display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.7);}
-.modal-content {background:white; margin:50px auto; padding:20px; border-radius:12px; max-width:700px; position:relative;}
-.close {position:absolute; top:10px; right:20px; font-size:28px; font-weight:bold; cursor:pointer;}
-.modal-content img {width:100%; margin-bottom:10px; border-radius:10px;}
-.modal-content h3 {margin-top:0;}
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f4f6f7;
+}
+
+header{
+  background:#2e7d32;
+  color:#fff;
+  text-align:center;
+  padding:25px 15px;
+}
+
+header h1{margin:0;font-size:34px;}
+header p{margin:5px 0;}
+
+nav{
+  background:#1b5e20;
+  padding:10px;
+  text-align:center;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.container{
+  max-width:1100px;
+  margin:30px auto;
+  padding:15px;
+}
+
+.products{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+}
+
+/* Ürün Kartı */
+.product-card{
+  background:#fff;
+  width:260px;
+  padding:15px;
+  border-radius:14px;
+  box-shadow:0 6px 14px rgba(0,0,0,0.15);
+  text-align:center;
+}
+
+.product-card img{
+  width:100%;
+  height:200px;
+  object-fit:contain;
+  cursor:pointer;
+}
+
+.product-card h3{
+  font-size:18px;
+  margin:10px 0;
+}
+
+.price{
+  font-size:18px;
+  font-weight:bold;
+}
+
+.whatsapp-btn{
+  display:inline-block;
+  margin-top:10px;
+  background:#25d366;
+  color:#fff;
+  padding:10px 14px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.detail-btn{
+  display:block;
+  margin:10px auto 0;
+  background:#2e7d32;
+  color:#fff;
+  border:none;
+  padding:8px 12px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* Modal */
+.modal{
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.6);
+  z-index:1000;
+}
+
+.modal-content{
+  background:#fff;
+  margin:5% auto;
+  padding:20px;
+  max-width:600px;
+  border-radius:12px;
+}
+
+.close{
+  float:right;
+  font-size:28px;
+  cursor:pointer;
+}
+
+.modal-images img{
+  width:100%;
+  max-height:250px;
+  object-fit:contain;
+  margin-bottom:10px;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-  <h1>Ev Gereçleri</h1>
-  <p>Ev için pratik ve kullanışlı ürünler</p>
+  <h1>Dost Pazar</h1>
+  <p><strong>Dosta gider gibi alışveriş.</strong></p>
+  <p>Gördüğün neyse o.</p>
 </header>
 
 <nav>
-  <a href="index.html">← Ana Sayfaya Dön</a>
+  <a href="index.html">← Ana Sayfa</a>
 </nav>
 
 <div class="container">
-  <div class="product-list">
+<h2 style="text-align:center;">Ev Gereçleri</h2>
 
-    <!-- 4 Bölmeli Saklama Kabı -->
-    <div class="product-card">
-      <img src="images/ev_gerecleri/saklama_kabi/eg_sk_a.png" alt="4 Bölmeli Saklama Kabı" onclick="openModal('modal1')">
-      <h3>4 Bölmeli Saklama Kabı</h3>
-      <p class="price"><strong>50 TL</strong></p>
-      <p>Çok Amaçlı Saklama Kutusu</p>
-      <a class="detay-btn" onclick="openModal('modal1')">Detaylı Bilgi</a>
-      <a class="whatsapp-btn" href="https://wa.me/905510471653?text=4%20B%C3%B6lmeli%20Saklama%20Kab%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank">WhatsApp Satıcıya Sor</a>
-    </div>
+<div class="products">
 
-  </div>
+<!-- ÜRÜN 1 -->
+<div class="product-card">
+  <img src="images/ev_gerecleri/saklama_kabi/eg_sk_a.png"
+       onclick="openModal('modal1')">
+  <h3>4 Bölmeli Saklama Kabı</h3>
+  <p class="price">50 TL</p>
+  <p>Çok Amaçlı Saklama Kutusu</p>
+  <a class="whatsapp-btn" href="https://wa.me/905510471653" target="_blank">
+    WhatsApp Satıcıya Sor
+  </a>
+  <button class="detail-btn" onclick="openModal('modal1')">Detaylı Bilgi</button>
 </div>
 
-<!-- Modal -->
+<!-- ÜRÜN 2 -->
+<div class="product-card">
+  <img src="images/ev_gerecleri/led_lam/eg_led_a.png"
+       onclick="openModal('modal2')">
+  <h3>3 Kollu Pervane Led Ampul</h3>
+  <p class="price">130 TL</p>
+  <p>Katlanabilir 45W Led Ampul</p>
+  <a class="whatsapp-btn" href="https://wa.me/905510471653" target="_blank">
+    WhatsApp Satıcıya Sor
+  </a>
+  <button class="detail-btn" onclick="openModal('modal2')">Detaylı Bilgi</button>
+</div>
+
+</div>
+</div>
+
+<!-- MODAL 1 -->
 <div id="modal1" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal1')">&times;</span>
-    <h3>4 Bölmeli Saklama Kabı</h3>
-    <p class="price"><strong>50 TL</strong></p>
-    <p>Çok amaçlı mini saklama kutusu. Her bölme 250 ml kapasite, toplam 1000 ml. Sızdırmaz kapak, BPA içermez, PP 5. Boyut: 20x15x6,5 cm. Ürün sıfırdır, stok için bilgi isteyiniz.</p>
-    <img src="images/ev_gerecleri/saklama_kabi/eg_sk_1.png" alt="">
-    <img src="images/ev_gerecleri/saklama_kabi/eg_sk_2.png" alt="">
-    <img src="images/ev_gerecleri/saklama_kabi/eg_sk_3.png" alt="">
-    <img src="images/ev_gerecleri/saklama_kabi/eg_sk_4.png" alt="">
-    <img src="images/ev_gerecleri/saklama_kabi/eg_sk_5.png" alt="">
-    <img src="images/ev_gerecleri/saklama_kabi/eg_sk_6.png" alt="">
-    <a class="whatsapp-btn" href="https://wa.me/905510471653?text=4%20B%C3%B6lmeli%20Saklama%20Kab%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank">WhatsApp Satıcıya Sor</a>
-  </div>
+<div class="modal-content">
+<span class="close" onclick="closeModal('modal1')">&times;</span>
+<h2>4 Bölmeli Saklama Kabı</h2>
+<p class="price">50 TL</p>
+<div class="modal-images">
+<img src="images/ev_gerecleri/saklama_kabi/eg_sk_1.png">
+<img src="images/ev_gerecleri/saklama_kabi/eg_sk_2.png">
+<img src="images/ev_gerecleri/saklama_kabi/eg_sk_3.png">
+<img src="images/ev_gerecleri/saklama_kabi/eg_sk_4.png">
+<img src="images/ev_gerecleri/saklama_kabi/eg_sk_5.png">
+<img src="images/ev_gerecleri/saklama_kabi/eg_sk_6.png">
+</div>
+<p>1000 ml kapasiteli, BPA içermeyen, sızdırmaz saklama kabı.</p>
+<a class="whatsapp-btn" href="https://wa.me/905510471653" target="_blank">
+WhatsApp Satıcıya Sor
+</a>
+</div>
+</div>
+
+<!-- MODAL 2 -->
+<div id="modal2" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('modal2')">&times;</span>
+<h2>Katlanabilir 3 Kollu Pervane Led Ampul</h2>
+<p class="price">130 TL</p>
+<div class="modal-images">
+<img src="images/ev_gerecleri/led_lam/eg_led_1.png">
+<img src="images/ev_gerecleri/led_lam/eg_led_2.png">
+<img src="images/ev_gerecleri/led_lam/eg_led_3.png">
+</div>
+<p>45W güçlü aydınlatma, E27 duy uyumlu, %80 enerji tasarrufu sağlar.</p>
+<a class="whatsapp-btn" href="https://wa.me/905510471653" target="_blank">
+WhatsApp Satıcıya Sor
+</a>
+</div>
 </div>
 
 <script>
-function openModal(id) { document.getElementById(id).style.display = "block"; }
-function closeModal(id) { document.getElementById(id).style.display = "none"; }
-window.onclick = function(event) {
-  var modal = document.getElementById('modal1');
-  if (event.target == modal) { modal.style.display = "none"; }
+function openModal(id){
+  document.getElementById(id).style.display="block";
+}
+function closeModal(id){
+  document.getElementById(id).style.display="none";
 }
 </script>
 
