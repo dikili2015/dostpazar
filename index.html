@@ -1,250 +1,200 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dost Pazar | Dosta gider gibi alışveriş</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dost Pazar</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f4f6f8;
-      color: #333;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f7;
+}
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+header {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+}
 
-    /* HEADER */
-    header {
-      background-color: #2f855a;
-      color: #fff;
-      text-align: center;
-      padding: 25px 15px;
-    }
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
+header p {
+  margin: 5px 0;
+  font-size: 18px;
+}
 
-    header h2 {
-      margin: 10px 0 5px;
-      font-size: 20px;
-      font-weight: normal;
-    }
+nav {
+  background: #1b5e20;
+  padding: 10px;
+  text-align: center;
+}
 
-    header p {
-      margin: 0;
-      font-size: 15px;
-      opacity: 0.9;
-    }
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    /* MENU */
-    nav {
-      background-color: #22543d;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      padding: 12px;
-    }
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 15px;
+}
 
-    nav a {
-      color: #fff;
-      font-weight: bold;
-      padding: 8px 14px;
-      border-radius: 6px;
-      transition: 0.3s;
-      font-size: 14px;
-    }
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
-    nav a:hover {
-      background-color: #1a3f2e;
-    }
+.category-link {
+  text-decoration: none;
+  color: inherit;
+}
 
-    /* ANA ALAN */
-    .container {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 15px;
-    }
+.category {
+  background: white;
+  width: 240px;
+  padding: 25px 15px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  transition: 0.3s;
+  cursor: pointer;
+}
 
-    /* KATEGORİLER */
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      margin-bottom: 50px;
-    }
+.category:hover {
+  transform: translateY(-5px);
+}
 
-    .category {
-      background: #fff;
-      padding: 30px 20px;
-      text-align: center;
-      border-radius: 14px;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-      transition: 0.3s;
-    }
+.category h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
 
-    .category:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.18);
-    }
+.category p {
+  font-size: 15px;
+  color: #555;
+}
 
-    .category h3 {
-  margin-bottom: 12px;
-  font-size: 26px;
-    }
+.location {
+  background: white;
+  margin-top: 40px;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  text-align: center;
+}
 
-
-    .category p {
-      font-size: 14px;
-      color: #666;
-    }
-
-    /* KONUM */
-    .location {
-      background-color: #ffffff;
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-      margin-bottom: 40px;
-    }
-
-    .location h3 {
-      margin-top: 0;
-      margin-bottom: 15px;
-    }
-
-    .location p {
-      margin: 6px 0;
-      font-size: 15px;
-    }
-
-    .location a {
-      color: #2f855a;
-      font-weight: bold;
-    }
-
-    /* WHATSAPP */
-    .whatsapp {
-      text-align: center;
-      margin: 40px 0;
-    }
-
-    .whatsapp a {
-      background-color: #25D366;
-      color: #fff;
-      padding: 14px 22px;
-      border-radius: 12px;
-      font-size: 18px;
-      font-weight: bold;
-      display: inline-block;
-      transition: 0.3s;
-    }
-
-    .whatsapp a:hover {
-      background-color: #1ebe5d;
-    }
-
-    /* FOOTER */
-    footer {
-      background-color: #22543d;
-      color: #fff;
-      text-align: center;
-      padding: 18px;
-      font-size: 14px;
-    }
-  </style>
+.whatsapp {
+  display: inline-block;
+  margin-top: 15px;
+  background: #25d366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+</style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Dost Pazar</h1>
-    <h2>Dosta gider gibi alışveriş.</h2>
-    <p>Gördüğün neyse o.</p>
-  </header>
+<header>
+  <h1>Dost Pazar</h1>
+  <p><strong>Dosta gider gibi alışveriş.</strong></p>
+  <p>Gördüğün neyse o.</p>
+</header>
 
-  <!-- MENU -->
-  <nav>
-    <a href="#">Ana Sayfa</a>
-    <a href="#">Kategoriler</a>
-    <a href="#">Konum</a>
-    <a href="#">İletişim</a>
-  </nav>
+<nav>
+  <a href="index.html">Ana Sayfa</a>
+</nav>
 
-  <!-- İÇERİK -->
-  <div class="container">
+<div class="container">
 
-    <!-- KATEGORİLER -->
-    <div class="categories">
+  <h2 style="text-align:center;">Kategoriler</h2>
+
+  <div class="categories">
+
+    <a href="kiyafet.html" class="category-link">
       <div class="category">
         <h3>👕 Kıyafet</h3>
-        <p>Temiz ve kullanılır ikinci el</p>
+        <p>İkinci el giyim ürünleri</p>
       </div>
+    </a>
 
+    <a href="ayakkabi.html" class="category-link">
       <div class="category">
         <h3>👟 Ayakkabı</h3>
-        <p>Sağlam, uygun fiyatlı</p>
+        <p>Temiz ve kullanışlı ayakkabılar</p>
       </div>
+    </a>
 
+    <a href="akilli-saat.html" class="category-link">
       <div class="category">
         <h3>⌚ Akıllı Saat</h3>
-        <p>Çalışır durumda ürünler</p>
+        <p>Akıllı saat ve aksesuarlar</p>
       </div>
+    </a>
 
+    <a href="hirdavat.html" class="category-link">
       <div class="category">
         <h3>🔧 Hırdavat</h3>
-        <p>Vida, musluk, el aletleri</p>
+        <p>Ev ve tamir ürünleri</p>
       </div>
+    </a>
 
+    <a href="ev-gerecleri.html" class="category-link">
       <div class="category">
-        <h3>📚 Kitap - Kırtasiye - Oyuncak</h3>
+        <h3>🏠 Ev Gereçleri</h3>
+        <p>Ev için pratik ürünler</p>
+      </div>
+    </a>
+
+    <a href="kitap-kirtasiye-oyuncak.html" class="category-link">
+      <div class="category">
+        <h3>📚 Kitap · Kırtasiye · Oyuncak</h3>
         <p>Çocuk ve yetişkin ürünleri</p>
       </div>
+    </a>
 
-      <div class="category">
-      <h3>🏠 Ev Gereçleri</h3>
-      <p>Ev için pratik ürünler</p>
-      </div>
-
-
+    <a href="cep-telefonu.html" class="category-link">
       <div class="category">
         <h3>📱 Cep Telefonu</h3>
-        <p>Çalışır durumdaki cihazlar</p>
+        <p>Telefon ve aksesuarlar</p>
       </div>
-    </div>
-
-    <!-- KONUM -->
-    <div class="location">
-      <h3>📍 Konum</h3>
-      <p>
-        <a href="https://maps.app.goo.gl/SBvP81oima5xbUB97" target="_blank">
-          Egekent Park Otobüs Durağı
-        </a>
-      </p>
-      <p><strong>Adres:</strong> Egekent, 8845. Sk. No:7, Çiğli / İzmir</p>
-      <p><strong>Telefon / WhatsApp:</strong> 0 551 047 16 53</p>
-    </div>
-
-    <!-- WHATSAPP -->
-    <div class="whatsapp">
-      <a href="https://wa.me/905510471653" target="_blank">
-        WhatsApp ile İletişime Geç
-      </a>
-    </div>
+    </a>
 
   </div>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Dost Pazar • İkinci el alışveriş
-  </footer>
+  <div class="location">
+    <h2>📍 Konum</h2>
+    <p><strong>Egekent Park Otobüs Durağı</strong></p>
+    <p>Egekent, 8845. Sk. No:7, 35610 Aosb / Çiğli / İzmir</p>
+
+    <a href="https://maps.app.goo.gl/SBvP81oima5xbUB97" target="_blank">
+      Haritada Aç
+    </a>
+
+    <br>
+
+    <a class="whatsapp"
+       href="https://wa.me/905510471653"
+       target="_blank">
+       WhatsApp ile İletişim
+    </a>
+  </div>
+
+</div>
 
 </body>
 </html>
