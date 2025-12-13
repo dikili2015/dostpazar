@@ -4,109 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dost Pazar</title>
-
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f6f7;
-}
-
-header {
-  background: #2e7d32;
-  color: white;
-  text-align: center;
-  padding: 25px 15px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 36px;
-}
-
-header p {
-  margin: 5px 0;
-  font-size: 18px;
-}
-
-nav {
-  background: #1b5e20;
-  padding: 10px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  margin: 0 12px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 30px auto;
-  padding: 15px;
-}
-
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.category-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.category {
-  background: white;
-  width: 240px;
-  padding: 25px 15px;
-  border-radius: 14px;
-  text-align: center;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.category:hover {
-  transform: translateY(-5px);
-}
-
-.category h3 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.category p {
-  font-size: 15px;
-  color: #555;
-}
-
-.location {
-  background: white;
-  margin-top: 40px;
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-  text-align: center;
-}
-
-.whatsapp {
-  display: inline-block;
-  margin-top: 15px;
-  background: #25d366;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
+body {margin:0; font-family:Arial,sans-serif; background:#f4f6f7; color:#333;}
+header {background:#2e7d32; color:white; text-align:center; padding:25px 15px;}
+header h1 {margin:0; font-size:36px;}
+header p {margin:5px 0; font-size:18px;}
+nav {background:#1b5e20; padding:10px; text-align:center;}
+nav a {color:white; margin:0 12px; text-decoration:none; font-weight:bold;}
+.container {max-width:1100px; margin:30px auto; padding:15px;}
+.categories {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+.category-link {text-decoration:none; color:inherit;}
+.category {background:white; width:240px; padding:25px 15px; border-radius:14px; text-align:center; box-shadow:0 6px 14px rgba(0,0,0,0.15); transition:0.3s; cursor:pointer;}
+.category:hover {transform:translateY(-5px);}
+.category h3 {font-size:28px; margin-bottom:10px;}
+.category p {font-size:15px; color:#555;}
+.whatsapp-btn {display:inline-block; margin-top:10px; background:#25d366; color:white; padding:12px 18px; border-radius:8px; text-decoration:none; font-weight:bold;}
+.whatsapp-btn:hover {background:#1ebe5d;}
+.location {background:white; margin-top:40px; padding:25px; border-radius:14px; box-shadow:0 6px 14px rgba(0,0,0,0.15); text-align:center;}
 </style>
 </head>
-
 <body>
 
 <header>
@@ -120,15 +36,14 @@ nav a {
 </nav>
 
 <div class="container">
-
   <h2 style="text-align:center;">Kategoriler</h2>
-
   <div class="categories">
 
     <a href="kiyafet.html" class="category-link">
       <div class="category">
         <h3>👕 Kıyafet</h3>
         <p>İkinci el giyim ürünleri</p>
+        <a class="whatsapp-btn" href="https://wa.me/905510471653" target="_blank">WhatsApp Satıcıya Sor</a>
       </div>
     </a>
 
@@ -136,6 +51,7 @@ nav a {
       <div class="category">
         <h3>👟 Ayakkabı</h3>
         <p>Temiz ve kullanışlı ayakkabılar</p>
+        <a class="whatsapp-btn" href="https://wa.me/905510471653" target="_blank">WhatsApp Satıcıya Sor</a>
       </div>
     </a>
 
@@ -143,6 +59,7 @@ nav a {
       <div class="category">
         <h3>⌚ Akıllı Saat</h3>
         <p>Akıllı saat ve aksesuarlar</p>
+        <a class="whatsapp-btn" href="https://wa.me/905510471653" target="_blank">WhatsApp Satıcıya Sor</a>
       </div>
     </a>
 
@@ -150,6 +67,7 @@ nav a {
       <div class="category">
         <h3>🔧 Hırdavat</h3>
         <p>Ev ve tamir ürünleri</p>
+        <a class="whatsapp-btn" href="https://wa.me/905510471653" target="_blank">WhatsApp Satıcıya Sor</a>
       </div>
     </a>
 
@@ -157,6 +75,7 @@ nav a {
       <div class="category">
         <h3>🏠 Ev Gereçleri</h3>
         <p>Ev için pratik ürünler</p>
+        <a class="whatsapp-btn" href="https://wa.me/905510471653" target="_blank">WhatsApp Satıcıya Sor</a>
       </div>
     </a>
 
@@ -164,6 +83,7 @@ nav a {
       <div class="category">
         <h3>📚 Kitap · Kırtasiye · Oyuncak</h3>
         <p>Çocuk ve yetişkin ürünleri</p>
+        <a class="whatsapp-btn" href="https://wa.me/905510471653" target="_blank">WhatsApp Satıcıya Sor</a>
       </div>
     </a>
 
@@ -171,6 +91,7 @@ nav a {
       <div class="category">
         <h3>📱 Cep Telefonu</h3>
         <p>Telefon ve aksesuarlar</p>
+        <a class="whatsapp-btn" href="https://wa.me/905510471653" target="_blank">WhatsApp Satıcıya Sor</a>
       </div>
     </a>
 
@@ -180,18 +101,8 @@ nav a {
     <h2>📍 Konum</h2>
     <p><strong>Egekent Park Otobüs Durağı</strong></p>
     <p>Egekent, 8845. Sk. No:7, 35610 Aosb / Çiğli / İzmir</p>
-
-    <a href="https://maps.app.goo.gl/SBvP81oima5xbUB97" target="_blank">
-      Haritada Aç
-    </a>
-
-    <br>
-
-    <a class="whatsapp"
-       href="https://wa.me/905510471653"
-       target="_blank">
-       WhatsApp ile İletişim
-    </a>
+    <a href="https://maps.app.goo.gl/SBvP81oima5xbUB97" target="_blank">Haritada Aç</a><br>
+    <a class="whatsapp-btn" href="https://wa.me/905510471653" target="_blank">WhatsApp Satıcıya Sor</a>
   </div>
 
 </div>
