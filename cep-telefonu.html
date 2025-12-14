@@ -19,9 +19,6 @@ header{
   padding:25px 15px;
 }
 
-header h1{margin:0;font-size:34px;}
-header p{margin:5px 0;}
-
 nav{
   background:#1b5e20;
   padding:10px;
@@ -47,7 +44,6 @@ nav a{
   justify-content:center;
 }
 
-/* ÜRÜN KARTI */
 .product{
   background:#fff;
   width:260px;
@@ -94,7 +90,7 @@ nav a{
   font-weight:bold;
 }
 
-/* DETAY ALANI */
+/* DETAY */
 .detay{
   background:#fff;
   margin:40px auto;
@@ -132,11 +128,6 @@ nav a{
 
 <div class="products">
 
-<!-- =====================================================
-     🔴🔴🔴 YENİ ÜRÜN EKLEME ALANI (ÜRÜN KARTLARI) 🔴🔴🔴
-     Yeni ürün kartlarını BU ALANA ekle
-===================================================== -->
-
 <!-- ÜRÜN 1 -->
 <div class="product">
   <img src="images/cep_tel/arac_tel/at_a.png">
@@ -144,21 +135,47 @@ nav a{
   <p class="price">200 TL</p>
   <p>Ön Konsol, Kaymaz & Güçlü Sabitleme</p>
   <a class="btn" href="#urun-tutucu">Detaylı Bilgi</a><br>
-  <a class="whatsapp" href="https://wa.me/905510471653" target="_blank">
-    WhatsApp Satıcıya Sor
-  </a>
+  <a class="whatsapp" href="https://wa.me/905510471653">WhatsApp Satıcıya Sor</a>
 </div>
 
-<!-- 🔴 YENİ ÜRÜN KARTI BURAYA EKLENECEK 🔴 -->
+<!-- ÜRÜN 2 -->
+<div class="product">
+  <img src="images/cep_tel/akrobat_/ak_a.png">
+  <h3>Akrobat Telefon Tutucu</h3>
+  <p class="price">120 TL</p>
+  <p>Hareketli spiral gövde</p>
+  <a class="btn" href="#urun-akrobat">Detaylı Bilgi</a><br>
+  <a class="whatsapp" href="https://wa.me/905510471653">WhatsApp Satıcıya Sor</a>
+</div>
 
 </div>
 </div>
 
-<!-- DETAY : Akrobat Telefon Tutucu -->
-  
+<!-- ================= DETAYLAR ================= -->
+
+<div id="urun-tutucu" class="detay">
+  <a class="btn" href="#liste">← Cep Telefonu</a>
+  <h2>360° Oynar Başlıklı Telefon Tutucu</h2>
+  <p class="price">200 TL</p>
+
+  <img src="images/cep_tel/arac_tel/at_1.png">
+  <img src="images/cep_tel/arac_tel/at_2.png">
+  <img src="images/cep_tel/arac_tel/at_3.png">
+
+  <video controls>
+    <source src="images/cep_tel/arac_tel/at_7.mp4" type="video/mp4">
+  </video>
+
+  <p>
+    360° dönebilen oynar başlık, güçlü sabitleme ve tek elle kullanım sağlar.
+    Ürün sıfırdır, stok için bilgi isteyiniz.
+  </p>
+
+  <a class="whatsapp" href="https://wa.me/905510471653">WhatsApp Satıcıya Sor</a>
+</div>
+
 <div id="urun-akrobat" class="detay">
   <a class="btn" href="#liste">← Cep Telefonu</a>
-
   <h2>Akrobat Telefon Tutucu</h2>
   <p class="price">120 TL</p>
 
@@ -166,83 +183,13 @@ nav a{
   <img src="images/cep_tel/akrobat_/ak_2.png">
 
   <p>
-    Akrobat Telefon Tutucu sayesinde evinizde, ofisinizde veya araçta
-    ergonomik kullanım sağlar.  
-    Hareketli spiral gövdesi ve oynar başlığı sayesinde istediğiniz açıyı
-    kolayca ayarlayabilirsiniz.
-    Poliüretan kaplı tutma aparatları ile güçlü kavrama sunar.
-    500 grama kadar taşıma gücüne sahiptir.
-    Spiral gövde uzunluğu 60 cm’dir.
+    Hareketli spiral gövde, oynar başlık ve güçlü kavrama sunar.
+    60 cm spiral uzunluğu vardır.
+    Ürün sıfırdır.
   </p>
 
-  <a class="whatsapp" href="https://wa.me/905510471653">
-    WhatsApp Satıcıya Sor
-  </a>
+  <a class="whatsapp" href="https://wa.me/905510471653">WhatsApp Satıcıya Sor</a>
 </div>
-  
-
-  
-<!-- ÜRÜN : Akrobat Telefon Tutucu -->
-<div class="product">
-  <img src="images/cep_tel/akrobat_/ak_a.png">
-  <h3>Akrobat Telefon Tutucu</h3>
-  <p class="price">120 TL</p>
-  <p>Hareketli spiral gövde</p>
-  <a class="btn" href="#urun-akrobat">Detaylı Bilgi</a><br>
-  <a class="whatsapp" href="https://wa.me/905510471653">
-    WhatsApp Satıcıya Sor
-  </a>
-</div>
-  
-  
-  
-
-  
-<!-- =====================================================
-     🔴🔴🔴 YENİ ÜRÜN EKLEME ALANI (DETAYLAR) 🔴🔴🔴
-     Karttaki href ile ID AYNI olmalı
-===================================================== -->
-
-<!-- DETAY 1 -->
-<div id="urun-tutucu" class="detay">
-  <a class="btn" href="#liste">← Cep Telefonu</a>
-
-  <h2>360° Oynar Başlıklı Telefon Tutucu</h2>
-  <p class="price">200 TL</p>
-
-  <img src="images/cep_tel/arac_tel/at_1.png">
-  <img src="images/cep_tel/arac_tel/at_2.png">
-  <img src="images/cep_tel/arac_tel/at_3.png">
-  <img src="images/cep_tel/arac_tel/at_4.jpeg">
-  <img src="images/cep_tel/arac_tel/at_5.jpeg">
-  <img src="images/cep_tel/arac_tel/at_6.jpeg">
-
-  <video controls>
-    <source src="images/cep_tel/arac_tel/at_7.mp4" type="video/mp4">
-    Tarayıcınız video etiketini desteklemiyor.
-  </video>
-
-  <p>
-    360° dönebilen oynar başlık – İstediğiniz açıyı yakalayın.<br>
-    ABS plastik + paslanmaz çelik – Dayanıklı ve uzun ömürlü.<br>
-    Dört loblu küçük kart kafası – Ekrana zarar vermez.<br>
-    Güçlü yay + geçmeli taban – Tek elle kolay kullanım.<br>
-    Geri çekilebilir kelepçe kolu – 3–7 inç telefonlara uygundur.<br>
-    Boyut: 6,8 x 12 cm<br><br>
-
-    ✨ Ofiste, evde veya araç içinde kullanım için idealdir.<br>
-    ✨ Film/dizi izleme, görüntülü konuşma ve navigasyon için uygundur.<br><br>
-
-    Ürün sıfırdır, hiç kullanılmamıştır.  
-    Stok için bilgi isteyiniz.
-  </p>
-
-  <a class="whatsapp" href="https://wa.me/905510471653" target="_blank">
-    WhatsApp Satıcıya Sor
-  </a>
-</div>
-
-<!-- 🔴 YENİ ÜRÜN DETAYI BURAYA EKLENECEK 🔴 -->
 
 </body>
 </html>
