@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dost Pazar | Ürün Ekleme Aracı</title>
+
+<style>
+body{
+  font-family:Arial, sans-serif;
+  background:#f4f6f7;
+  margin:0;
+  padding:20px;
+}
+.container{
+  max-width:800px;
+  margin:auto;
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 6px 14px rgba(0,0,0,0.15);
+}
+h1{text-align:center;}
+label{font-weight:bold; display:block; margin-top:15px;}
+input, textarea, select{
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+button{
+  margin-top:20px;
+  padding:12px;
+  width:100%;
+  background:#2e7d32;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+pre{
+  background:#111;
+  color:#0f0;
+  padding:15px;
+  border-radius:8px;
+  overflow:auto;
+  font-size:13px;
+}
+small{color:#555;}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>🧩 Ürün Kod Üretici</h1>
+
+<label>Kategori</label>
+<select id="kategori">
+  <option value="ayakkabi">Ayakkabı</option>
+  <option value="kiyafet">Kıyafet</option>
+  <option value="cep-telefonu">Cep Telefonu</option>
+  <option value="ev-gerecleri">Ev Gereçleri</option>
+  <option value="hirdavat">Hırdavat</option>
+</select>
+
+<label>Ürün Adı</label>
+<input id="ad" placeholder="Siyah Deri Ayakkabı 42 Numara">
+
+<label>Kısa Açıklama (1 cümle)</label>
+<input id="kisa" placeholder="DESA marka, günlük kullanım">
+
+<label>Fiyat</label>
+<input id="fiyat" placeholder="250 TL">
+
+<label>Ana Resim Yolu (kartta görünen)</label>
+<input id="anaResim" placeholder="images/ayakkabi/.../1.png">
+
+<label>Detay Resimleri (alt alta, sırayla)</label>
+<textarea id="detayResimler" rows="4"
+placeholder="images/.../1.png
+images/.../2.png
+images/.../3.png"></textarea>
+
+<label>Detay Açıklama</label>
+<textarea id="aciklama" rows="5"></textarea>
+
+<button onclick="uret()">KODU OLUŞTUR</button>
+
+<h3>📦 Ürün Kartı Kodu</h3>
+<pre id="kartKod"></pre>
+
+<h3>📄 Ürün Detay Kodu</h3>
+<pre id="detayKod"></pre>
+
+</div>
+
+<script>
+function uret(){
+  const ad = document.getElementById("ad").value;
+  const kisa = document.getElementById("kisa").value;
+  const fiyat = document.getElementById("fiyat").value;
+  const ana = document.getElementById("anaResim").value;
+  const aciklama = document.getElementById("aciklama").value;
+  const kategori = document.getElementById("kategori").value;
+
+  const id = "urun-" + ad.toLowerCase()
+    .replace(/[^a-z0-9]+/g,"-");
+
+  const resimler = document.getElementById("detayResimler")
+    .value.split("\n")
+    .map(r => `<img src="${r.trim()}">`)
+    .join("\n  ");
+
+  document.getElementById("kartKod").textContent =
+`<div class="product">
+  <img src="${ana}">
+  <h3>${ad}</h3>
+  <p class="price">${fiyat}</p>
+  <p>${kisa}</p>
+  <a class="btn" href="#${id}">Detaylı Bilgi</a><br>
+  <a class="whatsapp" href="https://wa.me/905510471653" target="_blank">
+    WhatsApp Satıcıya Sor
+  </a>
+</div>`;
+
+  document.getElementById("detayKod").textContent =
+`<div id="${id}" class="detay">
+  <a class="btn" href="#liste">← ${kategori}</a>
+
+  <h2>${ad}</h2>
+  <p class="price">${fiyat}</p>
+
+  ${resimler}
+
+  <p>
+    ${aciklama.replace(/\n/g,"<br>")}
+  </p>
+
+  <a class="whatsapp" href="https://wa.me/905510471653" target="_blank">
+    WhatsApp Satıcıya Sor
+  </a>
+</div>`;
+}
+</script>
+
+</body>
+</html>
