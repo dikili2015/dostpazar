@@ -48,7 +48,6 @@ pre{
   overflow:auto;
   font-size:13px;
 }
-small{color:#555;}
 </style>
 </head>
 
@@ -67,7 +66,6 @@ small{color:#555;}
   <option value="hirdavat">Hırdavat</option>
   <option value="kitap-kirtasiye-oyuncak">Kitap · Kırtasiye · Oyuncak</option>
 </select>
-
 
 <label>Ürün Adı</label>
 <input id="ad" placeholder="Siyah Deri Ayakkabı 42 Numara">
@@ -88,7 +86,8 @@ images/.../2.png
 images/.../3.png"></textarea>
 
 <label>Detay Açıklama</label>
-<textarea id="aciklama" rows="5"></textarea>
+<textarea id="aciklama" rows="5"
+placeholder="Ürünün detaylı açıklaması..."></textarea>
 
 <button onclick="uret()">KODU OLUŞTUR</button>
 
@@ -107,14 +106,27 @@ function uret(){
   const fiyat = document.getElementById("fiyat").value;
   const ana = document.getElementById("anaResim").value;
   const aciklama = document.getElementById("aciklama").value;
-  const kategori = document.getElementById("kategori").value;
+  const kategoriSelect = document.getElementById("kategori");
 
-  const id = "urun-" + ad.toLowerCase()
-    .replace(/[^a-z0-9]+/g,"-");
+  const kategori = kategoriSelect.value;
+  const kategoriText = kategoriSelect.selectedOptions[0].text;
+
+  const id = "urun-" + ad
+    .toLowerCase()
+    .replace(/ç/g,"c")
+    .replace(/ğ/g,"g")
+    .replace(/ı/g,"i")
+    .replace(/ö/g,"o")
+    .replace(/ş/g,"s")
+    .replace(/ü/g,"u")
+    .replace(/[^a-z0-9]+/g,"-")
+    .replace(/^-+|-+$/g,"");
 
   const resimler = document.getElementById("detayResimler")
     .value.split("\n")
-    .map(r => `<img src="${r.trim()}">`)
+    .map(r => r.trim())
+    .filter(r => r !== "")
+    .map(r => `<img src="${r}">`)
     .join("\n  ");
 
   document.getElementById("kartKod").textContent =
@@ -131,7 +143,7 @@ function uret(){
 
   document.getElementById("detayKod").textContent =
 `<div id="${id}" class="detay">
-  <a class="btn" href="#liste">← ${kategori}</a>
+  <a class="btn" href="#liste">← ${kategoriText}</a>
 
   <h2>${ad}</h2>
   <p class="price">${fiyat}</p>
